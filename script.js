@@ -1,6 +1,10 @@
 let firstNumber = 0;
 let operator = 0;
 let secondNumber = 0;
+let displayValue = 0;
+let display = document.getElementsByClassName("display")[0];
+display.textContent = displayValue;
+
 
 
 
@@ -33,4 +37,7 @@ function operate(firstNum, secondNum, operator) {
     }
 }
 
-console.log(operate(1,8,"/"))
+if(document.getElementsByClassName("equal").clicked == true)
+{
+  operate(firstNumber, secondNumber, operator);
+}
