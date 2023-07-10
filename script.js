@@ -27,17 +27,20 @@ function divide(a,b) {
 
 function operate(firstNum, secondNum, operator) {
     if (operator == "+") {
-        return add(firstNum, secondNum);
+        displayValue = add(firstNum, secondNum);
     } else if (operator == "-") {
-        return subtract(firstNum, secondNum);
+        displayValue = subtract(firstNum, secondNum);
     } else if (operator == "*") {
-        return multiply(firstNum, secondNum);
+        displayValue = multiply(firstNum, secondNum);
     } else {
-        return divide(firstNum, secondNum);
+        displayValue = divide(firstNum, secondNum);
     }
+    display.textContent = displayValue;
 }
 
 if(document.getElementsByClassName("equal").clicked == true)
 {
   operate(firstNumber, secondNumber, operator);
 }
+
+operate(1,100,"+");
